@@ -2,29 +2,50 @@ import java.util.Scanner;
 
 public class Gugudan {
 
-	public static void main(String[] args) {
-
-		//구구단
-
-		//		for(int i=2; i<=9; i++) {
-		//			for(int j=1; j<=9; j++) {
-		//			System.out.println(i+ " * " + j+ " = " +i*j);
-		//			}
-		//			System.out.print("\n");
-		//		}
-		Scanner sc = new Scanner(System.in);
-
-		System.out.print("단 을 입력하세요");
-		int gu = sc.nextInt();
-		if(gu<2||gu>9) {
-			System.out.println("2이상, 9이하의 값만 입력하세요");
-		} else {
-			System.out.println(gu+"단");
-			for (int i=1; i<=9; i++) {
-				System.out.println(gu + " * " + i +" = " +gu*i);
+	Scanner sc = new Scanner(System.in);
+	
+	public void calculate() {
+		System.out.println("단을 입력하시오");
+	int times = sc.nextInt();
+	int[] result;
+		for(int i=2; i<=times;i++) {
+		System.out.println(i+"단");
+			for(int j=1; j<10; j++) {
+				System.out.println(i + "*" + j + " = "+ i*j);
+			}
+	}
+		
+		
+	}
+	
+	
+	
+	public void calculate2() {
+		System.out.println("단을 입력하시오. (a,b)");
+		String times = sc.next();
+		String[] split = times.split(",");
+		
+		int first =Integer.parseInt(split[0]);
+		int last =Integer.parseInt(split[1]);
+		
+		
+		for(int i=2; i<=first; i++) {
+			for(int j=1; j<=last; j++) {
+				System.out.println(i + "*" + j + " = "+ i*j);
 			}
 		}
-
+		
+		
 	}
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
